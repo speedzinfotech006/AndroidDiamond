@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "300946530292",
+    "firebase_url": "https://sunrise-diamonds-live.firebaseio.com",
+    "project_id": "sunrise-diamonds-live",
+    "storage_bucket": "sunrise-diamonds-live.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300946530292:android:32f3afe29c9cd6b7",
+        "android_client_info": {
+          "package_name": "com.dnk.shairugems"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300946530292-89lv5tvn003stnrrs2o56j7lgras1itl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dnk.shairugems",
+            "certificate_hash": "e4db01fa3554814d01ff24f08c4c1809b9c15609"
+          }
+        },
+        {
+          "client_id": "300946530292-u09jic8dg1cinvupmf1fh0a4gt9un7ui.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dnk.shairugems",
+            "certificate_hash": "1169eef860a176a334df00518ad7b9dab224cca4"
+          }
+        },
+        {
+          "client_id": "300946530292-kecr2k2tn3kuv4rcsj4q6ci28btved2a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcd2ilFLf7QbyPEO_ZJI1uAv_FqQZDXCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "300946530292-kecr2k2tn3kuv4rcsj4q6ci28btved2a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

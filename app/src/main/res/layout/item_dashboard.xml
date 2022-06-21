@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="120dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/MainCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/shadow_darkgray" />
+
+        <RelativeLayout
+            android:id="@+id/rlCardDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_background_box" />
+
+            <TextView
+                android:id="@+id/TxtMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search Stock"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/proxima_nova" />
+
+            <TextView
+                android:id="@+id/Txtsub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/proxima_nova" />
+
+            <ImageView
+                android:id="@+id/imgDashboard"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:padding="5dp"
+                android:src="@drawable/ic_total_stock"
+                android:tint="@color/colorPrimary" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

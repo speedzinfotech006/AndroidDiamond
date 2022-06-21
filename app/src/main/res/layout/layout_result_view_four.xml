@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_centerInParent="true"
+                android:background="@color/green"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:fontFamily="@font/proxima_nova" />
+
+            <ImageView
+                android:id="@+id/imgLocation"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_hk" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                android:text="GIA"
+                android:textSize="13sp"
+                app:fontFamily="@font/proxima_nova" />
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_round_card">
+
+                <ImageView
+                    android:id="@+id/imgShape"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_round"
+                    android:tint="@color/colorPrimary" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BXW-12106"
+                    android:textColor="@color/colorPrimary"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="&amp;"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3335702019"
+                    android:textColor="@color/colorPrimary"
+                    app:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="0.72  -  D  -  VS2  -  VG"
+                android:textColor="@color/mediumBlack"
+                android:textSize="13sp"
+                app:fontFamily="@font/proxima_nova" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="EX  -  EX  -  EX  -  NON"
+                android:textColor="@color/mediumBlack"
+                android:textSize="13sp"
+                app:fontFamily="@font/proxima_nova" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="0.72-0.79  -  WHITE"
+                android:textColor="@color/mediumBlack"
+                android:textSize="13sp"
+                app:fontFamily="@font/proxima_nova" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="4.14x5.68x2.87"
+                android:textColor="@color/mediumBlack"
+                android:textSize="13sp"
+                app:fontFamily="@font/proxima_nova" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RAP : 2800"
+                    android:textColor="@color/mediumBlack"
+                    android:textSize="13sp"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="-59.50 %"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="13sp"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="$/CTS : 1620.00"
+                    android:textColor="@color/mediumBlack"
+                    android:textSize="13sp"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="DEPTH : 69.30 %"
+                    android:textColor="@color/mediumBlack"
+                    android:textSize="13sp"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="$ : 1209.60"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="13sp"
+                    app:fontFamily="@font/proxima_nova" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_right"
+                android:tint="@color/darkGray" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/mediumGray" />
+
+</LinearLayout>

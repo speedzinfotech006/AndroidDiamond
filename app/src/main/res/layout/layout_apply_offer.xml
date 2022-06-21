@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="false"
+    android:background="@drawable/round_dialog"
+    android:minWidth="300dp"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/round_error_color">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Apply Offer"
+        android:layout_gravity="center"
+        app:fontFamily="@font/proxima_nova"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llSizeFromTo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2">
+
+                <EditText
+                    android:id="@+id/etOfferDisc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_shadow"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/editTitle"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:singleLine="true"
+                    android:text="Offer Disc"
+                    android:textColor="@color/mediumBlack"
+                    app:fontFamily="@font/proxima_nova" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2">
+
+                <EditText
+                    android:id="@+id/etOfferAmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_shadow"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/editTitle"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:singleLine="true"
+                    android:text="Offer Amt"
+                    android:textColor="@color/mediumBlack"
+                    app:fontFamily="@font/proxima_nova" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2">
+
+                <EditText
+                    android:id="@+id/etValidDays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_shadow"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/editTitle"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:singleLine="true"
+                    android:text="Valid Days"
+                    android:textColor="@color/mediumBlack"
+                    app:fontFamily="@font/proxima_nova" />
+            </RelativeLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/round_error_color_bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/proxima_nova"
+            android:layout_marginRight="1dp"
+            android:layout_weight="2"
+            android:background="@drawable/round_error_color_bottom"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Apply"
+            android:textColor="@color/white" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="2"
+            app:fontFamily="@font/proxima_nova"
+            android:background="@drawable/round_error_color_bottom"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Cancel"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

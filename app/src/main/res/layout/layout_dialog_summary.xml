@@ -1,0 +1,403 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rlMain"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/toproundcorners"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:background="@drawable/toproundcorners"
+                android:backgroundTint="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Calculation Summary"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/edittext_focusble"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Pcs"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova"/>
+
+                        <TextView
+                            android:id="@+id/tvPcs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/edittext_focusble"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="CTS"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:id="@+id/tvCts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="0.28"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/edittext_focusble"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Offer Disc"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:id="@+id/tvOfferDisc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="43.19 %"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/edittext_focusble"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Offer Value"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:id="@+id/tvOfferValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="$ 621.44"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/edittext_focusble"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Price/Cts"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:id="@+id/tvPriceCts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="2,219.43"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/edittext_focusble"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Web Disc"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:id="@+id/tvWebDisc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="$ 5.47"
+                            android:textColor="#1215f9"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/edittext_focusble"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Final Disc"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova"/>
+
+                        <TextView
+                            android:id="@+id/tvFinalDisc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="41.93 %"
+                            android:textColor="#FF0000"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/edittext_focusble"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Final Value"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:id="@+id/tvFinalValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="$ 615.97"
+                            android:textColor="#FF0000"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontFamily="@font/proxima_nova" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/round_button"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvOk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proxima_nova"
+                        android:gravity="center"
+                        android:text=" OK "
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        app:fontFamily="@font/proxima_nova"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:background="@drawable/close"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

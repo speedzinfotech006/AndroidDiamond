@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llClick"
+    android:layout_width="85dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_shape"
+    android:gravity="center"
+    android:layout_marginRight="3dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:layout_marginLeft="2dp"
+        android:src="@drawable/ic_round"
+        android:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightgray"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="Round"
+        android:layout_marginLeft="2dp"
+        android:textColor="@color/colorPrimary"
+        app:fontFamily="@font/proxima_nova" />
+
+</LinearLayout>

@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.infideap.drawerbehavior.Advance3DDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/BaseDrawer_uppper_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgProfile"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/ic_user_" />
+
+                            <TextView
+                                android:id="@+id/tvUserName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:text="Sunrise Diamond"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="17sp"
+                                android:textStyle="bold"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/imgEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="?android:selectableItemBackground"
+                            android:src="@drawable/ic_edit"
+                            android:tint="@color/colorPrimary" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/hline1"
+                        android:layout_below="@+id/BaseDrawer_uppper_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:background="@color/darkGray"
+                        android:layout_marginLeft="8dp"/>
+
+                    <ScrollView
+                        android:id="@+id/nestedscrollview"
+                        android:layout_below="@+id/hline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:scrollbars="none"
+                        android:overScrollMode="never"
+                        android:layout_marginBottom="55dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_home"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/tvMenu_Home"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Home"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlSearchStock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_search_new"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_Searchstock"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Search Stock"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlOrderHistory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@drawable/ic_order_history"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_OrderHistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Order History"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlsupplierOrder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?android:selectableItemBackground"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:paddingLeft="8dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/ic_supplier_order"
+                                android:tint="@color/colorPrimaryDark" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:background="@color/darkGray" />
+
+                            <TextView
+                                android:id="@+id/tvMenu_supplierOrder"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="50dp"
+                                android:paddingVertical="14dp"
+                                android:textSize="16sp"
+                                android:text="Purchase Order"
+                                android:textColor="@color/black"
+                                app:fontFamily="@font/proxima_nova" />
+                        </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlMyCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <TextView
+                            android:id="@+id/tvCountCart"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/round_text_blue"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:visibility="visible"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <ImageView
+                            android:id="@+id/ivCart"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_cart_"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_MyCart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="My Cart"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlWishlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <TextView
+                            android:id="@+id/tvCountWish"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/round_text_blue"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:visibility="visible"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <ImageView
+                            android:id="@+id/ivWish"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_wishlist"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_MyWishList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="My Wishlist"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlRecentSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_recent_search"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_RecentSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Recent Search"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlOfferStone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_offer1"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_OfferStone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Offer Stone"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlSaveSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_diamond"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_SaveSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Save Search"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlPairSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/pair"
+                            android:tint="@color/colorPrimaryDark"
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_PairSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Pair Search"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlNewArrival"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_new_arrival"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_NewArrival"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="New Arrival"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlQuickSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_save_search"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_QuickSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Quick Search"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlOfferHistory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_offer"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_offerHistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Offer History"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlLabStock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_search_new"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_LabStock"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Lab Stock"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlRevisedPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/ic_revised_price"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+                            android:paddingTop="18dp"
+                            android:paddingBottom="18dp"
+                            android:text="Revised Price"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlSearchStockFour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/ic_search"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+                            android:paddingTop="18dp"
+                            android:paddingBottom="18dp"
+                            android:text="Result Page"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlManageUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_manage_user"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_manageUser"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Manage User"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlConfirmOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_confirm_order"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_confirmOrder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Confirm Order"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlHoldStoneReport"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?android:selectableItemBackground"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:paddingLeft="8dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="11dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/ic_hold_stone"
+                                android:tint="@color/colorPrimaryDark" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:background="@color/darkGray" />
+
+                            <TextView
+                                android:id="@+id/tvMenu_holdStoneReport"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="50dp"
+                                android:paddingVertical="14dp"
+                                android:textSize="16sp"
+                                android:text="Hold Stone Report"
+                                android:textColor="@color/black"
+                                app:fontFamily="@font/proxima_nova" />
+                        </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlUserMgt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_user"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_UserMgt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="User Management"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlPacketTrace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/packettrace"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_PacketTrace"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Packet Trace"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlManagePassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_manage_pass"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_ManagePassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Manage Password"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlService"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_service"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+                            android:paddingTop="18dp"
+                            android:paddingBottom="18dp"
+                            android:text="Service"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlAboutUs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_about_us"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_AboutUs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="About Us"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlContactUs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="10dp"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_contact"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:id="@+id/tvMenu_ContactUs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="50dp"
+                            android:paddingVertical="14dp"
+                            android:textSize="16sp"
+                            android:text="Contact Us"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                 </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/llLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimary"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_logout" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="1dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOGOUT"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</com.infideap.drawerbehavior.Advance3DDrawerLayout>

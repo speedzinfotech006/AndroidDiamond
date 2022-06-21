@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    tools:context=".ConfirmOrderActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="?android:selectableItemBackground"
+            android:padding="5dp"
+            android:src="@drawable/ic_drawer"
+            android:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/imgMenu"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Confirm Order"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:fontFamily="@font/proxima_nova" />
+
+        <ImageView
+            android:id="@+id/imgSave"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:tint="@color/white"
+            android:layout_margin="8dp"
+            android:layout_toLeftOf="@+id/imgDown"
+            android:padding="6dp"
+            android:background="?android:selectableItemBackground"
+            android:src="@drawable/ic_update" />
+
+        <ImageView
+            android:id="@+id/imgDown"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:tint="@color/white"
+            android:layout_margin="8dp"
+            android:padding="5dp"
+            android:background="?android:selectableItemBackground"
+            android:src="@drawable/ic_down_new" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llButtom"
+        android:layout_below="@+id/toolBar"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:id="@+id/llSearchTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="3dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="2">
+
+                    <EditText
+                        android:id="@+id/etFromDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/shadow_orderhistory"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:imeOptions="actionNext"
+                        android:editable="false"
+                        android:hint="From Date"
+                        android:textColorHint="@color/darkgray"
+                        android:nextFocusForward="@id/etToDate"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:singleLine="true"
+                        android:text="From Date"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/ic_down"
+                        android:tint="@color/white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="2">
+
+                    <EditText
+                        android:id="@+id/etToDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/shadow_orderhistory"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:imeOptions="actionNext"
+                        android:editable="false"
+                        android:nextFocusForward="@id/etSearch"
+                        android:padding="10dp"
+                        android:hint="To Date"
+                        android:textColorHint="@color/darkgray"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/colorPrimary"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:singleLine="true"
+                        android:text="To Date"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/ic_down"
+                        android:tint="@color/white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="2dp">
+
+                        <LinearLayout
+                            android:id="@+id/llClear"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="2dp"
+                                android:src="@drawable/ic_reset" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:text="CLEAR"
+                                android:visibility="gone"
+                                android:textColor="@color/white"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llSearch"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="2dp"
+                                android:src="@drawable/ic_search" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:text="SEARCH"
+                                android:visibility="gone"
+                                android:textColor="@color/white"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSearchTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.2">
+
+                    <EditText
+                        android:id="@+id/etSearchStock"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/shadow_orderhistory"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/etStatus"
+                        android:padding="10dp"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:textCursorDrawable="@color/white"
+                        android:hint="Stock ID/Order No Comma(,)Separated"
+                        android:textColorHint="@color/darkgray"
+                        android:textColor="@color/white"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:singleLine="true"
+                        android:text="Stock ID/Order No/Certi No"
+                        android:visibility="gone"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/white"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2">
+
+                    <EditText
+                        android:id="@+id/etUserSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/shadow_orderhistory"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/etStatus"
+                        android:padding="10dp"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:textCursorDrawable="@color/white"
+                        android:hint="Company Name/User Name"
+                        android:textColorHint="@color/darkgray"
+                        android:textColor="@color/white"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:singleLine="true"
+                        android:text="Stock ID/Order No/Certi No"
+                        android:visibility="gone"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/white"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp">
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="36dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="SR"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Date"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Order No"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Company Name"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="User Name"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Stock ID"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <CheckBox
+                            android:id="@+id/cbSelectAll"
+                            android:layout_width="36dp"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorPrimary"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="@drawable/toproundcorners">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Share Info"
+            android:padding="3dp"
+            android:textSize="17sp"
+            android:visibility="gone"
+            app:fontFamily="@font/proxima_nova" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/gray"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:id="@+id/llExcel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <CheckBox
+                android:id="@+id/cbBoxExcel"
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:visibility="gone"
+                app:fontFamily="@font/proxima_nova" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="Excel"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:fontFamily="@font/proxima_nova" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="3dp"
+                android:layout_marginLeft="32dp"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/ic_excel_new" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <CheckBox
+                android:id="@+id/cbBoxDetails"
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:visibility="gone"
+                app:fontFamily="@font/proxima_nova" />
+
+            <TextView
+                android:id="@+id/tvDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="Details"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:fontFamily="@font/proxima_nova" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:layout_marginLeft="22dp"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/ic_detail" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <CheckBox
+                android:id="@+id/cbBoxImages"
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:visibility="gone"
+                app:fontFamily="@font/proxima_nova" />
+
+            <TextView
+                android:id="@+id/tvAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="Images"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:fontFamily="@font/proxima_nova" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="3dp"
+                android:layout_marginLeft="20dp"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/images" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <CheckBox
+                android:id="@+id/cbBoxVideo"
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:visibility="gone"
+                app:fontFamily="@font/proxima_nova" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:text="Video"
+                android:textColor="@color/black"
+                app:fontFamily="@font/proxima_nova" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:layout_marginLeft="28dp"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/video" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCerti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <CheckBox
+                android:id="@+id/cbBoxCerti"
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:visibility="gone"
+                app:fontFamily="@font/proxima_nova" />
+
+            <TextView
+                android:id="@+id/tvNAtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:text="Cerificate"
+                android:textColor="@color/black"
+                app:fontFamily="@font/proxima_nova" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="2dp"
+                android:layout_marginLeft="5dp"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/certificate" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:padding="4dp">
+
+            <CheckBox
+                android:id="@+id/cbBoxAll"
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                app:fontFamily="@font/proxima_nova" />
+
+            <TextView
+                android:id="@+id/tvNAtext1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:text="All"
+                android:textColor="@color/black"
+                app:fontFamily="@font/proxima_nova" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="2dp"
+                android:layout_marginLeft="50dp"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/all" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/btnOk"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:textSize="15sp"
+                android:text="OK"
+                android:gravity="center"
+                android:background="@drawable/oval_new"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

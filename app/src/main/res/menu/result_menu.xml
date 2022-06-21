@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/iPlaceOrder"
+        android:title="Place Order"
+        app:showAsAction="ifRoom" />
+    <item
+        android:title="Email Stones"
+        app:showAsAction="ifRoom" />
+    <item
+        android:title="Status Information"
+        app:showAsAction="ifRoom" />
+    <item
+        android:title="Share"
+        app:showAsAction="ifRoom" />
+    <item
+        android:title="Reset"
+        app:showAsAction="ifRoom" />
+    <item
+        android:title="Compare Stone"
+        app:showAsAction="ifRoom" />
+    <item
+        android:title="Clear Selection"
+        app:showAsAction="ifRoom" />
+
+</menu>

@@ -1,0 +1,202 @@
+<resources>
+    <string name="app_name">Sunrise Diamonds</string>
+    <string name="app_name_dialog">Sunrise Diamond</string>
+
+
+    <string-array name="shape">
+        <!--        <item>ALL</item>-->
+        <item>Round</item>
+        <item>Cushion</item>
+        <item>Emerald</item>
+        <item>Oval</item>
+        <item>Heart</item>
+        <item>Pear</item>
+        <item>Marquise</item>
+        <item>Princess</item>
+        <item>Asscher</item>
+        <item>Radiant</item>
+        <item>Triangle</item>
+        <item>Others</item>
+    </string-array>
+
+    <integer-array name="shape_image">
+        <!--        <item>@drawable/ic_all</item>-->
+        <item>@drawable/ic_round</item>
+        <item>@drawable/ic_cushion</item>
+        <item>@drawable/ic_emerald</item>
+        <item>@drawable/ic_oval</item>
+        <item>@drawable/ic_heart</item>
+        <item>@drawable/ic_pear</item>
+        <item>@drawable/ic_marquise</item>
+        <item>@drawable/ic_princess</item>
+        <item>@drawable/ic_asscher</item>
+        <item>@drawable/ic_radiant</item>
+        <item>@drawable/ic_triangle</item>
+        <item>@drawable/ic_round</item>
+    </integer-array>
+
+    <string-array name="lab">
+        <item>GIA</item>
+        <item>HRD</item>
+        <item>IGI</item>
+        <item>AGS</item>
+        <item>FM</item>
+    </string-array>
+
+    <string-array name="color">
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>OTHERS</item>
+    </string-array>
+
+    <string-array name="intencity">
+        <item>DARK</item>
+        <item>FAINT</item>
+        <item>FANCY</item>
+        <item>FANCY DARK</item>
+        <item>FANCY DEEP</item>
+        <item>FANCY FAINT</item>
+        <item>FANCY GREEN</item>
+        <item>FANCY INTENSE</item>
+        <item>FANCY LIGHT</item>
+        <item>FANCY VIVID</item>
+        <item>LIGHT</item>
+        <item>VERY LIGHT</item>
+        <item>W-X</item>
+        <item>Y-Z</item>
+    </string-array>
+
+    <string-array name="overtone">
+        <item>BLUISH</item>
+        <item>BROWNISH</item>
+        <item>GRAYISH</item>
+        <item>GREENISH</item>
+        <item>NONE</item>
+        <item>ORANGEY</item>
+        <item>PINKISH</item>
+        <item>PURPLISH</item>
+        <item>REDDISH</item>
+        <item>YELLOWISH</item>
+    </string-array>
+
+    <string-array name="fancycolor">
+        <item>BLUE</item>
+        <item>BROWN</item>
+        <item>GRAY</item>
+        <item>GREEN</item>
+        <item>ORANGE</item>
+        <item>PINK</item>
+        <item>PURPLE</item>
+        <item>RED</item>
+        <item>VIOLET</item>
+        <item>YELLOW</item>
+    </string-array>
+
+    <string-array name="clarity">
+        <item>FL</item>
+        <item>IF</item>
+        <item>VVS1</item>
+        <item>VVS2</item>
+        <item>VS1</item>
+        <item>VS2</item>
+        <item>SI1</item>
+        <item>SI2</item>
+        <item>I1</item>
+        <item>I2</item>
+        <item>I3</item>
+    </string-array>
+
+    <string-array name="cut">
+        <item>3EX</item>
+        <item>EX</item>
+        <item>VG</item>
+        <item>G</item>
+        <item>F</item>
+        <item>P</item>
+        <item>-</item>
+    </string-array>
+
+    <string-array name="polish_symmetry">
+        <item>EX</item>
+        <item>VG</item>
+        <item>G</item>
+        <item>F</item>
+        <item>-</item>
+    </string-array>
+
+    <string-array name="fi">
+        <item>NON</item>
+        <item>FNT</item>
+        <item>MED</item>
+        <item>STG</item>
+        <item>VSTG</item>
+    </string-array>
+
+    <string-array name="bgm">
+        <item>NO BGM</item>
+        <item>BROWN</item>
+        <item>MILKY</item>
+    </string-array>
+
+    <string-array name="location">
+        <item>HONG KONG</item>
+        <item>UPCOMING</item>
+        <item>INDIA</item>
+        <item>DUBAI</item>
+    </string-array>
+
+    <string-array name="size">
+        <item>0.18-0.22</item>
+        <item>0.23-0.29</item>
+        <item>0.30-0.39</item>
+        <item>0.40-0.49</item>
+        <item>0.50-0.59</item>
+        <item>0.60-0.69</item>
+        <item>0.70-0.79</item>
+        <item>0.80-0.89</item>
+        <item>0.90-0.99</item>
+        <item>1.00-1.19</item>
+        <item>1.20-1.49</item>
+        <item>1.50-1.99</item>
+        <item>2.00-2.99</item>
+        <item>3.00-99.99</item>
+    </string-array>
+
+    <string-array name="table_black">
+        <item>NN</item>
+        <item>BT1</item>
+        <item>BT2</item>
+        <item>BT3</item>
+    </string-array>
+
+    <string-array name="crown_black">
+        <item>NN</item>
+        <item>BC1</item>
+        <item>BC2</item>
+        <item>BC3</item>
+    </string-array>
+
+    <string-array name="table_white">
+        <item>NN</item>
+        <item>T1</item>
+        <item>T2</item>
+        <item>T3</item>
+    </string-array>
+
+    <string-array name="crown_white">
+        <item>NN</item>
+        <item>C1</item>
+        <item>C2</item>
+        <item>C3</item>
+    </string-array>
+
+</resources>

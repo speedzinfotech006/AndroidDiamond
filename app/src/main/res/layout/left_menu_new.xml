@@ -1,0 +1,474 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/toproundcorners"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:background="@drawable/toproundcorners"
+                android:backgroundTint="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Sunrise Diamonds"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Menu_AddEmp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/oval_white"
+                    android:backgroundTint="@color/dudhiya"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_emp" />
+
+                <TextView
+                    android:id="@+id/tv_addEmployee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Add Employee"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <View android:id="@+id/div_AddEmp"
+                android:layout_height="0.50dp"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:id="@+id/Menu_Share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/img_Share"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/oval_white"
+                    android:backgroundTint="@color/pink"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_share" />
+
+                <TextView
+                    android:id="@+id/tv_Share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Share Information"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <View android:id="@+id/div_Share"
+                android:layout_height="0.50dp"
+                android:layout_width="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:id="@+id/Menu_Download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/img_Download"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/oval_white"
+                    android:backgroundTint="@color/orange"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:src="@drawable/download" />
+
+                <TextView
+                    android:id="@+id/tv_Download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Download Information"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <View android:id="@+id/div_Download"
+                android:layout_height="0.50dp"
+                android:layout_width="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:id="@+id/Menu_Wishlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/oval_white"
+                    android:backgroundTint="@color/dudhiya"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_wishlist" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Add to Wishlist"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <View android:id="@+id/div_Wishlist"
+                android:layout_height="0.50dp"
+                android:layout_width="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:id="@+id/Menu_Compare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/oval_white"
+                    android:backgroundTint="@color/purple"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_compare" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Add to Compare"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <View android:id="@+id/div_Compare"
+                android:layout_height="0.50dp"
+                android:layout_width="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:id="@+id/Menu_Copy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/oval_white"
+                    android:backgroundTint="@color/yellow"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_copy" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Copy Information"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <View android:id="@+id/div_Copy"
+                android:layout_height="0.50dp"
+                android:layout_width="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:id="@+id/Menu_Stock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/oval_white"
+                    android:backgroundTint="@color/darkblue"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_excel_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Download Excel"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <View android:id="@+id/div_Stock"
+                android:layout_height="0.50dp"
+                android:layout_width="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:id="@+id/Menu_RemoveWishlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/oval_white"
+                    android:backgroundTint="@color/darkblue"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_delete" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Remove Stones"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <View android:id="@+id/div_Remove"
+                android:layout_height="0.50dp"
+                android:layout_width="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:id="@+id/Menu_HoldStone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/oval_white"
+                    android:backgroundTint="@color/darkpink"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_hold_stone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Hold Stone"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <View android:id="@+id/div_HoldStone"
+                android:layout_height="0.50dp"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:id="@+id/Menu_Clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/oval_white"
+                    android:backgroundTint="@color/yelloww"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_reset" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Clear Selection"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <View android:id="@+id/div_Back"
+                android:layout_height="0.50dp"
+                android:layout_width="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:id="@+id/Menu_Back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Back"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:background="@drawable/close"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    tools:context=".SearchResultTwoActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="?android:selectableItemBackground"
+            android:padding="5dp"
+            android:src="@drawable/ic_drawer"
+            android:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/imgMenu"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Search Result"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:fontFamily="@font/proxima_nova" />
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgLayout"
+            android:layout_toRightOf="@+id/imgMenu"
+            android:hint="Stone ID or Certificate No"
+            android:imeOptions="actionSearch"
+            android:padding="10dp"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/darkGray"
+            android:visibility="gone"
+            app:fontFamily="@font/proxima_nova" />
+
+        <ImageView
+            android:id="@+id/imgSearch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgLayout"
+            android:background="?android:selectableItemBackground"
+            android:padding="5dp"
+            android:src="@drawable/ic_search"
+            android:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/imgLayout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgOMenu"
+            android:background="?android:selectableItemBackground"
+            android:padding="10dp"
+            android:src="@drawable/ic_list"
+            android:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/imgOMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="?android:selectableItemBackground"
+            android:padding="5dp"
+            android:src="@drawable/ic_option_menu" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llButtom"
+        android:layout_below="@+id/toolBar"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:buttonTint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Showing 1 to 33 of 33 entries"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <ImageView
+                android:id="@+id/imgViewCount"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?android:selectableItemBackground"
+                android:src="@drawable/ic_down"
+                android:tint="@color/white" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llViewCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pcs : "
+                        android:textColor="@color/mediumGray"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="33"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cts : "
+                        android:textColor="@color/mediumGray"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27.48"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/gray" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Avg.Disc % : "
+                        android:textColor="@color/mediumGray"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-50.60 %"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price Per Cts : "
+                        android:textColor="@color/mediumGray"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 2,154.20"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount : "
+                        android:textColor="@color/mediumGray"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 59,197.55"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="36dp"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Stone ID"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Shape"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Color"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="45dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Clarity"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Cts"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="35dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Cut"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="35dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Pol"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="35dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Sym"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Fls"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="35dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Lab"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Measurement"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="55dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Depth (%)"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="55dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Table (%)"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Rap Price USD"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="55dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Disc (%)"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="89dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="1dp"
+                            android:gravity="center"
+                            android:text="Price/Cts USD"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/darkGray" />
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Total Amt USD"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llButtom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:id="@+id/llModify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="2dp"
+                android:padding="2.5dp"
+                android:src="@drawable/ic_modify"
+                android:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="MODIFY"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="2dp"
+                android:padding="2.5dp"
+                android:src="@drawable/ic_cart_"
+                android:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="ADD TO CART"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

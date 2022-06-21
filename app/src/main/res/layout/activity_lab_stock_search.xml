@@ -1,0 +1,2374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    tools:context=".LabStockSearchActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="?android:selectableItemBackground"
+            android:padding="5dp"
+            android:src="@drawable/ic_drawer"
+            android:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Lab Stock Search"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:fontFamily="@font/proxima_nova" />
+
+        <ImageView
+            android:id="@+id/imgOMenu1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:background="?android:selectableItemBackground"
+            android:padding="5dp"
+            android:src="@drawable/ic_option_menu" />
+
+        <ImageView
+            android:id="@+id/imgEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:src="@drawable/ic_email" />
+
+        <ImageView
+            android:id="@+id/imgOMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:visibility="gone"
+            android:padding="10dp"
+            android:tint="@color/white"
+            android:src="@drawable/ic_supports" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llButtom"
+        android:layout_below="@+id/toolBar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/colorPrimary"
+                android:background="@drawable/edittext_shadow"
+                android:layout_margin="5dp">
+
+                <EditText
+                    android:id="@+id/etStoneOrCert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Stock ID/ Certificate No (Comma or Space)"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    app:fontFamily="@font/proxima_nova" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Trans Date"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="2">
+
+                    <EditText
+                        android:id="@+id/etFromDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:imeOptions="actionNext"
+                        android:editable="false"
+                        android:nextFocusForward="@id/etToDate"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:singleLine="true"
+                        android:text="From Date"
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="17dp"
+                        android:src="@drawable/ic_down"
+                        android:tint="@color/black" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="2">
+
+                    <EditText
+                        android:id="@+id/etToDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:padding="10dp"
+                        android:editable="false"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:singleLine="true"
+                        android:text="To Date"
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_down"
+                        android:tint="@color/black" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Trans ID"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp">
+
+                <EditText
+                    android:id="@+id/etTransId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_shadow"
+                    android:imeOptions="actionNext"
+                    android:editable="false"
+                    android:hint="Select Trans ID"
+                    android:padding="12dp"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_down"
+                    android:tint="@color/black" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Shape"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Size"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/rgSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbSpecific"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:buttonTint="@color/colorPrimary"
+                            android:fontFamily="@font/proxima_nova"
+                            android:text="Specific" />
+
+                        <RadioButton
+                            android:id="@+id/rbGeneral"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorPrimary"
+                            android:fontFamily="@font/proxima_nova"
+                            android:text="General" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llSizeFromTo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etFromCts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:nextFocusForward="@id/etToCts"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="From"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etToCts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="To"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/hsSize"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:scrollbars="none"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvSelectedSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/proxima_nova" />
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/imgSizeBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="?android:selectableItemBackground"
+                    android:src="@drawable/ic_plus"
+                    android:tint="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Color"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/rgColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:buttonTint="@color/colorPrimary"
+                            android:fontFamily="@font/proxima_nova"
+                            android:text="Regular" />
+
+                        <RadioButton
+                            android:id="@+id/rbFancy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorPrimary"
+                            android:fontFamily="@font/proxima_nova"
+                            android:text="Fancy" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:id="@+id/tvIntensity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Intensity"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvIntencity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:id="@+id/tvOvertone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Overtone"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOvertone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:id="@+id/tvFancyColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Fancy Color"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFancyColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Clarity"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvClarity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Cut"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv3EX"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_shape"
+                        android:gravity="center"
+                        android:text="3EX"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:layout_marginRight="3dp"
+                        android:textColor="@color/colorPrimary"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:id="@+id/tv3VG2"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_shape"
+                        android:gravity="center"
+                        android:text="3VG+"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:layout_marginRight="3dp"
+                        android:textColor="@color/colorPrimary"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:id="@+id/tvX"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_shape"
+                        android:gravity="center"
+                        android:text="EX"
+                        android:visibility="gone"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:layout_marginRight="3dp"
+                        android:textColor="@color/colorPrimary"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:id="@+id/tvVG"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_shape"
+                        android:gravity="center"
+                        android:text="VG+"
+                        android:visibility="gone"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:layout_marginRight="3dp"
+                        android:textColor="@color/colorPrimary"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:id="@+id/tv3VG"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_shape"
+                        android:gravity="center"
+                        android:text="3VG"
+                        android:visibility="gone"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:layout_marginRight="3dp"
+                        android:textColor="@color/colorPrimary"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Polish"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPolish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Symmetry"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSymmetry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Fluorescence Intensity"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="BGM"
+                android:visibility="visible"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBgm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Lab"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Table Black"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTableBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Crown Black"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCrownBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Table White"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTableWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Crown White"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCrownWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Table Open"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTableOpen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Crown Open"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCrownOpen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Pav Open"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPavOpen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Girdle Open"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGirdleOpen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Key To Symbol"
+                android:visibility="visible"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:visibility="visible"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/etSymbol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shadow"
+                        android:editable="false"
+                        android:hint="Select Key To Symbol"
+                        android:padding="12dp"
+                        android:textSize="15sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_down"
+                        android:tint="@color/black" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvBlankSymbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_shadow"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="BLANK"
+                    android:textColor="@color/colorPrimary"
+                    app:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/right_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Location"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Discount (%)"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etDisF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etDisT"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="From"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etDisT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etTauF"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="To"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:visibility="gone"
+                    android:text="Price/Cts USD"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etPcuF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etPcuT"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="From"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etPcuT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etTauF"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="To"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Total US ($)"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etTauF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etTauT"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="From"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etTauT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etLengthF"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="To"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Length"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etLengthF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etLengthT"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="From"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etLengthT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etWidthF"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="To"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvBlankLength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shadow"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="BLANK"
+                        android:textColor="@color/colorPrimary"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Width"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etWidthF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etWidthT"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="From"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etWidthT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etDepthF"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="To"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvBlankWidth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shadow"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="BLANK"
+                        android:textColor="@color/colorPrimary"
+                        app:fontFamily="@font/proxima_nova" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Depth"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etDepthF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etDepthT"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="From"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etDepthT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etDepthPF"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="To"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvBlankDepth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shadow"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="BLANK"
+                        android:textColor="@color/colorPrimary"
+                        app:fontFamily="@font/proxima_nova" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Depth (%)"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etDepthPF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etDepthPT"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="From"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etDepthPT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etTablePF"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="To"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvBlankDepthPer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shadow"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="BLANK"
+                        android:textColor="@color/colorPrimary"
+                        app:fontFamily="@font/proxima_nova" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Table (%)"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etTablePF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etTablePT"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="From"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etTablePT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etCrAngPF"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="To"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvBlankTablePer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shadow"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="BLANK"
+                        android:textColor="@color/colorPrimary"
+                        app:fontFamily="@font/proxima_nova" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Inclusion"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvInclusion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Natts"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvNatts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Cr Ang "
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etCrAngPF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etCrAngPT"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="From"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etCrAngPT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etCrHtPF"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="To"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvBlankCrAng"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shadow"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="BLANK"
+                        android:textColor="@color/colorPrimary"
+                        app:fontFamily="@font/proxima_nova" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Cr Ht "
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etCrHtPF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etCrHtPT"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="From"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etCrHtPT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:nextFocusForward="@id/etPavAngPF"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="To"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvBlankCrHit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shadow"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="BLANK"
+                        android:textColor="@color/colorPrimary"
+                        app:fontFamily="@font/proxima_nova" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Pav Ang "
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etPavAngPF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etPavAngPT"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="From"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etPavAngPT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:nextFocusForward="@id/etPavHtPF"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="To"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvBlankPavAng"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shadow"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="BLANK"
+                        android:textColor="@color/colorPrimary"
+                        app:fontFamily="@font/proxima_nova" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Pav Ht "
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etPavHtPF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:nextFocusForward="@id/etPavHtPT"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="From"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etPavHtPT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="To"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvBlankPavHit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_shadow"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="BLANK"
+                        android:textColor="@color/colorPrimary"
+                        app:fontFamily="@font/proxima_nova" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/right_radius"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Media "
+                    android:visibility="visible"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlImage"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/edittext_shadow">
+
+                        <ImageView
+                            android:id="@+id/imgImage"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_un_i"
+                            android:tint="@color/colorPrimary" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="1dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlVideo"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/edittext_shadow">
+
+                        <ImageView
+                            android:id="@+id/imgVideo"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_un_v"
+                            android:tint="@color/colorPrimary" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/llButtom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:id="@+id/llReset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/ic_reset" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="RESET"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="3"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/ic_btndownload" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="DOWNLOAD"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llShare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/ic_share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="SHARE"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

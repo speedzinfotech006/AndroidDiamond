@@ -1,0 +1,1609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    tools:context=".SearchFilterTwoActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="?android:selectableItemBackground"
+            android:padding="5dp"
+            android:src="@drawable/ic_drawer"
+            android:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Search Diamond"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:fontFamily="@font/proxima_nova" />
+
+        <ImageView
+            android:id="@+id/imgEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_email" />
+
+        <ImageView
+            android:id="@+id/imgCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_call" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llButtom"
+        android:layout_below="@+id/toolBar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shape"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fillViewport="true"
+                android:measureAllChildren="false"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/llAll"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgAll"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_all"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tvAll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="ALL"
+                                android:layout_marginLeft="2dp"
+                                android:textColor="@color/colorPrimary"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llRound"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgRound"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_round"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tvRound"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Round"
+                                android:layout_marginLeft="2dp"
+                                android:textColor="@color/colorPrimary"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llCushion"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgCushion"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_cushion"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tvCushion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Cushion"
+                                android:layout_marginLeft="2dp"
+                                android:textColor="@color/colorPrimary"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llEmerald"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgEmerald"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_emerald"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tvEmerald"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Emerald"
+                                android:layout_marginLeft="2dp"
+                                android:textColor="@color/colorPrimary"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llOval"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgOval"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_oval"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tvOval"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Oval"
+                                android:layout_marginLeft="2dp"
+                                android:textColor="@color/colorPrimary"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llHeart"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgHeart"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_heart"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tvHeart"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Heart"
+                                android:layout_marginLeft="2dp"
+                                android:textColor="@color/colorPrimary"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llPear"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgPear"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_pear"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tvPear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Pear"
+                                android:layout_marginLeft="2dp"
+                                android:textColor="@color/colorPrimary"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llMarquise"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgMarquise"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_marquise"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tvMarquise"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Marquise"
+                                android:layout_marginLeft="2dp"
+                                android:textColor="@color/colorPrimary"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llPrincess"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgPrincess"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_princess"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tvPrincess"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Princess"
+                                android:layout_marginLeft="2dp"
+                                android:textColor="@color/colorPrimary"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llAsscher"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgAsscher"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_asscher"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tvAsscher"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Asscher"
+                                android:layout_marginLeft="2dp"
+                                android:textColor="@color/colorPrimary"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llRadiant"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgRadiant"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_radiant"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tvRadiant"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Radiant"
+                                android:layout_marginLeft="2dp"
+                                android:textColor="@color/colorPrimary"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llTriangle"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgTriangle"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_triangle"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tvTriangle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Triangle"
+                                android:layout_marginLeft="2dp"
+                                android:textColor="@color/colorPrimary"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llOthers"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgOthers"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_round"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tvOthers"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Others"
+                                android:layout_marginLeft="2dp"
+                                android:textColor="@color/colorPrimary"
+                                app:fontFamily="@font/proxima_nova" />
+
+                        </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lab"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Color"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clarity"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvClarity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cut"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Polish"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPolish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Symmetry"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSymmetry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fluorescence Intensity"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price/Cts Usd &amp; Discount(%)"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="From"
+                        app:fontFamily="@font/proxima_nova" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="To"
+                        app:fontFamily="@font/proxima_nova" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="From"
+                        app:fontFamily="@font/proxima_nova" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="To"
+                        app:fontFamily="@font/proxima_nova" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BGM"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBgm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Key To Symbol"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp">
+
+                <EditText
+                    android:id="@+id/etSymbol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_focusble"
+                    android:editable="false"
+                    android:hint="Select Key To Symbol"
+                    android:padding="12dp"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_down"
+                    android:tint="@color/black" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Size"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llSizeFromTo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="From"
+                            app:fontFamily="@font/proxima_nova" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="To"
+                            app:fontFamily="@font/proxima_nova" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/hsSize"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:scrollbars="none"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvSelectedSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/proxima_nova" />
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/imgSizeBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:background="?android:selectableItemBackground"
+                    android:src="@drawable/ic_plus"
+                    android:tint="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbMovie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proxima_nova"
+                        android:text="Movie" />
+
+                    <CheckBox
+                        android:id="@+id/cbImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proxima_nova"
+                        android:text="Image" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Inclusion"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvInclusion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Natts"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvNatts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount Usd"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="From"
+                            app:fontFamily="@font/proxima_nova" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="To"
+                            app:fontFamily="@font/proxima_nova" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Length"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="From"
+                            app:fontFamily="@font/proxima_nova" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="To"
+                            app:fontFamily="@font/proxima_nova" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Width"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="From"
+                            app:fontFamily="@font/proxima_nova" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="To"
+                            app:fontFamily="@font/proxima_nova" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Depth"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="From"
+                            app:fontFamily="@font/proxima_nova" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="To"
+                            app:fontFamily="@font/proxima_nova" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Depth (%)"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="From"
+                            app:fontFamily="@font/proxima_nova" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="To"
+                            app:fontFamily="@font/proxima_nova" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Table (%)"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="From"
+                            app:fontFamily="@font/proxima_nova" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="To"
+                            app:fontFamily="@font/proxima_nova" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/llButtom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:id="@+id/llReset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/ic_reset" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="RESET"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/ic_search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="SEARCH"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

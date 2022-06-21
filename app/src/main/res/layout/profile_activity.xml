@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title=" ">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Profile Info"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:fontFamily="@font/proxima_nova" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlBottom"
+        android:layout_below="@+id/toolBar">
+
+        <RelativeLayout
+            android:id="@+id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@color/colorPrimary">
+
+            <View
+                android:id="@+id/vieww"
+                android:layout_width="90dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:id="@+id/tvFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/vieww"
+                android:text="Sunrise Diamond"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/proxima_nova" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/svScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlHeader">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:id="@+id/etFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:inputType="text"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/etLastName"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="First Name*"
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:id="@+id/etLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:padding="10dp"
+                        android:inputType="text"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/etCompName"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Last Name*"
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:id="@+id/etCompName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/etAddress1"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Company Name*"
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:id="@+id/etAddress1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/etAddress2"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Address 1*"
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:id="@+id/etAddress2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/etCountry"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Address 2"
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/etCity"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Country*"
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/etCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:inputType="text"
+                            android:imeOptions="actionNext"
+                            android:nextFocusForward="@id/etZipCode"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="City*"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etZipCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:padding="10dp"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="Zipcode"
+                            android:imeOptions="actionNext"
+                            android:nextFocusForward="@id/etMobile1"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/etISD1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:padding="10dp"
+                            android:editable="false"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="ISD"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etMobile1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="15"
+                            android:nextFocusForward="@id/etMobile2"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="Mobile 1*"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/etISD2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:padding="10dp"
+                            android:editable="false"
+                            android:singleLine="true"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="ISD"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etMobile2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="15"
+                            android:nextFocusForward="@id/etOfficePhone1"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="Mobile 2"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/etAreaCode1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:editable="false"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="Area Code"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etOfficePhone1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="15"
+                            android:nextFocusForward="@id/etOfficePhone2"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="Office Phone 1"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/etAreaCode2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:editable="false"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="Area Code"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etOfficePhone2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="15"
+                            android:nextFocusForward="@id/etFaxNo"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="Office Phone 2"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/etCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:editable="false"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="Code"
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/etFaxNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_shadow"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:nextFocusForward="@id/etEmailAddress1"
+                            app:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/editTitle"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:singleLine="true"
+                            android:text="Fax No."
+                            android:textColor="@color/mediumBlack"
+                            app:fontFamily="@font/proxima_nova" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:id="@+id/etEmailAddress1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/etEmailAddress2"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Email Address 1*"
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:id="@+id/etEmailAddress2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:inputType="textEmailAddress"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/etWebsite"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Email Address 2"
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:id="@+id/etWebsite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/etSkypeID"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Website"
+                        android:inputType="text"
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:id="@+id/etSkypeID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/etWeChatID"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Skype Id"
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:id="@+id/etWeChatID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/etBusinessRegNo"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="WeChat Id"
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:id="@+id/etBusinessRegNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/etRapID"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Bussiness Reg. No."
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:id="@+id/etRapID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_shadow"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/editTitle"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Rap Id"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/llSignUp"
+                        android:textColor="@color/mediumBlack"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignBottom="@id/rlHeader"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="-35dp"
+            android:src="@drawable/ic_user_" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:id="@+id/llUpdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/ic_update"
+                android:tint="@color/white"  />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="UPDATE"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                app:fontFamily="@font/proxima_nova" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

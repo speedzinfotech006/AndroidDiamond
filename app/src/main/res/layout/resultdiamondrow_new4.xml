@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/seperate"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#e9e9e9"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.50dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvtick"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:padding="1dp"
+            android:textStyle="bold"
+            android:layout_gravity="left"
+            android:textSize="15sp"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:background="@drawable/oval"/>
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@drawable/ic_background_box"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/llClick"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    android:buttonTint="@color/colorPrimary"
+                    android:gravity="center" />
+
+                <ImageView
+                    android:id="@+id/imgLocation"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvStoneID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="2"
+                            android:singleLine="true"
+                            android:text="BYB-310842"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvShape"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="RD"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvLab"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="GIA"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/tvCertiNo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="6335768200"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/tvMsrmnt"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:layout_weight="1"
+                            android:text="3.92x3.94x2.36"
+                            android:textColor="@color/black"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1.10"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:weightSum="1">
+
+                </TableRow>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray" />
+
+            <TableLayout
+                android:id="@+id/tlClick"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3.5">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvColor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="K"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvClarity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="VVS2"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/tvCPS"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="VG-EX-EX"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="12sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvFls"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="NON"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvCts"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="0.33"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="12sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvBgm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="NO BGM"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:background="@color/green"
+                        android:text="A"
+                        android:layout_marginRight="10dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/llClick2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/tvRapPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="Rap: 1,6000.00"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/llDiscountChange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Disc:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvDisc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-39.00%"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#FF0000"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPriceCts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="$/Cts: 976.00"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvRapAmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="$: 292.80"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/diamond_detail_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginRight="2dp"
+                android:layout_weight="0.25"
+                android:background="#00000000"
+                android:scaleType="fitCenter"
+                android:src="@drawable/rightarrow"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.50dp"
+        android:background="@android:color/darker_gray" />
+
+</LinearLayout>

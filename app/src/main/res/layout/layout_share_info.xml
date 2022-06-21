@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/tvClose"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/round_back"
+        android:gravity="center"
+        android:padding="10dp"
+        android:src="@drawable/ic_close"
+        android:tint="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_dialog"
+        android:backgroundTint="@color/gray"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_image_new" />
+
+                    <TextView
+                        android:id="@+id/tvImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Image"
+                        app:fontFamily="@font/proxima_nova"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_video_new" />
+
+                    <TextView
+                        android:id="@+id/tvVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        app:fontFamily="@font/proxima_nova"
+                        android:text="Video"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_detail" />
+
+                    <TextView
+                        android:id="@+id/tvDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        app:fontFamily="@font/proxima_nova"
+                        android:text="Detail"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llCertificate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_certificate" />
+
+                    <TextView
+                        android:id="@+id/tvCertificate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Certificate"
+                        app:fontFamily="@font/proxima_nova"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_certificate" />
+
+                    <TextView
+                        android:id="@+id/tvAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="All"
+                        app:fontFamily="@font/proxima_nova"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

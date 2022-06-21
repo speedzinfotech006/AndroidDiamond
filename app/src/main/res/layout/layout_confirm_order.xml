@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/seperate"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#e9e9e9"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.50dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvSrNo"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="SR"
+            android:textColor="@color/black"
+            app:fontFamily="@font/proxima_nova" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/darkGray" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:fontFamily="@font/proxima_nova" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/darkGray" />
+
+        <TextView
+            android:id="@+id/tvOrderNo"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:fontFamily="@font/proxima_nova" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/darkGray" />
+
+        <TextView
+            android:id="@+id/tvCompName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:fontFamily="@font/proxima_nova" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/darkGray" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:fontFamily="@font/proxima_nova" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/darkGray" />
+
+        <TextView
+            android:id="@+id/tvStockID"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textStyle="bold|italic"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="13sp"
+            app:fontFamily="@font/proxima_nova" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/darkGray" />
+
+        <CheckBox
+            android:id="@+id/cbBox"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            app:fontFamily="@font/proxima_nova" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/darkGray" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/darkGray" />
+
+</LinearLayout>

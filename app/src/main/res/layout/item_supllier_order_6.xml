@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_margin="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/shape_rec_blue">
+
+        <TextView
+            android:id="@+id/tvtick"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="left"
+            android:background="@drawable/oval"
+            android:padding="1dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/heading_part"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/odetail_location"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_hk"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/odetail_cust"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HEARTFOOK JEWELRY (HONGKONG) CO LIMITED"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:maxLines="3"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                app:fontFamily="@font/proxima_nova" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/hl_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/heading_part"
+            android:background="#CDCDCD"
+            android:layout_marginTop="5dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/llMainPart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hl_1"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/part1"
+                android:layout_weight="0.8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="0dp">
+
+                        <ImageView
+                            android:id="@+id/pr_image"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/pr"
+                            android:tint="#008A47"/>
+
+                        <TextView
+                            android:id="@+id/txt_profit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pr_image"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="2dp"
+                            android:maxLines="1"
+                            android:text="30.23%"
+                            android:textColor="#008A47"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/proxima_nova" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/odetail_fDisc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FD : -10.50 %"
+                        android:textColor="#1215f9"
+                        android:maxLines="1"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/proxima_nova"
+                        android:layout_margin="2dp"/>
+
+                    <TextView
+                        android:id="@+id/odetail_fvalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FV : $ 500.50"
+                        android:textColor="#1215f9"
+                        android:maxLines="1"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/proxima_nova"
+                        android:layout_margin="2dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="left"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/odetail_stoneid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AQ6972"
+                        android:textColor="#0091F3"
+                        android:maxLines="1"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:id="@+id/odetail_bgm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NO BGM"
+                        android:textColor="#1EB16A"
+                        android:maxLines="1"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="@dimen/_8ssp"
+                        android:autoSizeMaxTextSize="@dimen/_10ssp"
+                        android:textSize="@dimen/_9ssp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/proxima_nova"
+                        android:layout_marginLeft="4dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/odetail_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IGI"
+                        android:textColor="#FF1744"
+                        android:maxLines="1"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <TextView
+                        android:id="@+id/odetail_certino"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3262012630"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:textSize="@dimen/_10ssp"
+                        app:fontFamily="@font/proxima_nova"
+                        android:layout_marginLeft="5dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_BaseDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OD : -12.50 %"
+                    android:textColor="@color/rednew"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/proxima_nova"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/txt_BaseValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OV : $ 534.50"
+                    android:textColor="@color/rednew"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/proxima_nova"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp">
+
+
+                <TextView
+                    android:id="@+id/odetail_clarity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D - VS2 - 1.55"
+                    android:textColor="#0091F3"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/proxima_nova"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/odetail_cut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3EX-EX-EX NON"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontFamily="@font/proxima_nova"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/odetail_orderid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#220731"
+                    android:textColor="#494949"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontFamily="@font/proxima_nova"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/odetail_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="27-08-2021 "
+                    android:textColor="#494949"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontFamily="@font/proxima_nova"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llMainPart"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/txt_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status :"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                app:fontFamily="@font/proxima_nova" />
+
+            <TextView
+                android:id="@+id/txt_supplierStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Supplier Status : Confirm"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                app:fontFamily="@font/proxima_nova"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

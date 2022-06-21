@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/mediumGray" />
+
+                <RelativeLayout
+                    android:layout_width="32dp"
+                    android:layout_height="32dp">
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/green"
+                        android:gravity="center"
+                        android:text="A"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/mediumGray" />
+
+                <RelativeLayout
+                    android:layout_width="32dp"
+                    android:layout_height="32dp">
+
+                    <ImageView
+                        android:id="@+id/imgLocation"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_hk" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/mediumGray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/tvRefNo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="BXW-12106"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray" />
+
+                    <TextView
+                        android:id="@+id/tvCertiNo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="3335702019"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray" />
+
+                    <TextView
+                        android:id="@+id/tvShape"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="ROUND"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray" />
+
+                    <TextView
+                        android:id="@+id/tvDisc"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="-58.00"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/mediumGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:minWidth="30dp"
+                        android:padding="5dp"
+                        android:text="G"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray" />
+
+                    <TextView
+                        android:id="@+id/tvClarity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:minWidth="30dp"
+                        android:padding="5dp"
+                        android:text="VVS2"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray" />
+
+                    <TextView
+                        android:id="@+id/tvSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="0.55"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray" />
+
+                    <TextView
+                        android:id="@+id/tvCut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:minWidth="30dp"
+                        android:padding="5dp"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray" />
+
+                    <TextView
+                        android:id="@+id/tvPolish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:minWidth="30dp"
+                        android:padding="5dp"
+                        android:text="EX"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray" />
+
+                    <TextView
+                        android:id="@+id/tvSymm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:minWidth="30dp"
+                        android:padding="5dp"
+                        android:text="EX"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray" />
+
+                    <TextView
+                        android:id="@+id/tvFls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="NON"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray" />
+
+                    <TextView
+                        android:id="@+id/tvMsrmnt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="4.14x5.68x2.87"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/mediumGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvRapPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="2,700.00 $"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray" />
+
+                    <TextView
+                        android:id="@+id/tvRapAmt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="1,485.00 $"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray" />
+
+                    <TextView
+                        android:id="@+id/tvNetValue"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="1,134.00 $"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/mediumGray" />
+
+                    <TextView
+                        android:id="@+id/tvTotalPricePerCts"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="1,485.00"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

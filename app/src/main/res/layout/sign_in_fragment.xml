@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="false"
+    android:gravity="center"
+    android:focusableInTouchMode="true"
+    tools:context=".Fragment.SignInFragment">
+
+    <LinearLayout
+        android:id="@+id/llLoginRound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            app:fontFamily="@font/proxima_nova"
+            android:text="Sign In"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_focusble"
+                android:padding="10dp"
+                app:fontFamily="@font/proxima_nova"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@color/editTitle"
+                android:paddingLeft="3dp"
+                app:fontFamily="@font/proxima_nova"
+                android:paddingRight="3dp"
+                android:text="Username"
+                android:textColor="@color/mediumBlack" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_focusble"
+                    android:imeOptions="actionDone"
+                    app:fontFamily="@font/proxima_nova"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/imgShowHide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/proxima_nova"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_hide"
+                    android:tint="@color/black" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@color/editTitle"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="Password"
+                android:textColor="@color/mediumBlack" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/proxima_nova"
+                android:text="Remember me" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                app:fontFamily="@font/proxima_nova"
+                android:text="Forgot Password ?"
+                android:textColor="@color/colorPrimaryDark" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:fontFamily="@font/proxima_nova"
+            android:background="@color/colorPrimary"
+            android:text="Sign In"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

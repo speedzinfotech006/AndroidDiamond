@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_margin="10dp"
+        android:paddingVertical="10dp"
+        android:background="@drawable/shape_rec_blue">
+
+
+        <TextView
+            android:id="@+id/txt_cmpName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HEARTFOOK JEWELRY (HONGKONG) CO LIMITED"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:maxLines="3"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="5dp"
+            app:fontFamily="@font/proxima_nova" />
+
+        <View
+            android:id="@+id/hl_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/txt_cmpName"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="5dp"/>
+
+        <ImageView
+            android:layout_width="95dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/hl_1"
+            android:src="@drawable/profit_vector"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitStart"
+            android:layout_marginTop="-8dp"/>
+
+        <TextView
+            android:id="@+id/txt_profit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hl_1"
+            android:text="50.63 %"
+            android:gravity="center"
+            android:textColor="#1FAC38"
+            android:maxLines="3"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="80dp"
+            app:fontFamily="@font/proxima_nova" />
+
+        <LinearLayout
+            android:id="@+id/part1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_below="@+id/hl_1"
+            android:layout_marginRight="110dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txt_BaseValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Base Value\n$ 534.50"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/proxima_nova"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txt_BaseDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Base Disc\n -12.50 %"
+                    android:textColor="@color/rednew"
+                    android:maxLines="2"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/proxima_nova"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/txt_finalValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Final Value\n$ 500.50"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/proxima_nova"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txt_finalDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Final Disc\n-10.50 %"
+                    android:textColor="@color/rednew"
+                    android:maxLines="2"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/proxima_nova"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/hl_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/part1"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="8dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/part2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hl_2"
+            android:layout_marginTop="8dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/txt_orderNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#220731"
+                    android:textColor="#0091F3"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_hk"/>
+
+                    <TextView
+                        android:id="@+id/txt_stoneID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AQ6972"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:textSize="15sp"
+                        app:fontFamily="@font/proxima_nova"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginVertical="2dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_certiNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3262012630"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/proxima_nova"
+                    android:layout_margin="2dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginRight="15dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txt_orderDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="27-08-2021 "
+                    android:textColor="#0091F3"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/proxima_nova" />
+
+                <TextView
+                    android:id="@+id/txt_ColClrSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D - VS2 - 1.55"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/proxima_nova"
+                    android:layout_margin="2dp"/>
+
+
+                <TextView
+                    android:id="@+id/txt_cutPolFlsSym"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3EX-EX-EX NON"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/proxima_nova"
+                    android:layout_margin="2dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

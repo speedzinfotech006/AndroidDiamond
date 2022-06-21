@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Details"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:fontFamily="@font/proxima_nova" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/mediumGray" />
+
+    <TextView
+        android:id="@+id/tvImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Image"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:fontFamily="@font/proxima_nova" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/mediumGray" />
+
+    <TextView
+        android:id="@+id/tvVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Video"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:fontFamily="@font/proxima_nova" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/mediumGray" />
+
+    <TextView
+        android:id="@+id/tvCertificate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Certificate"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:fontFamily="@font/proxima_nova" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/mediumGray" />
+
+    <TextView
+        android:id="@+id/tvAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="All"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:fontFamily="@font/proxima_nova" />
+
+</LinearLayout>

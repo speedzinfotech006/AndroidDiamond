@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    tools:context=".ContactUsActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="?android:selectableItemBackground"
+            android:padding="5dp"
+            android:src="@drawable/ic_drawer"
+            android:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/imgMenu"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Contact Us"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:fontFamily="@font/proxima_nova" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBar"
+        android:background="@color/mediumGray"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedscrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llHorizontal1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:visibility="visible"
+                android:background="@color/lightgray"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/colorPrimary"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="HONG KONG"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/proxima_nova"
+                            android:textSize="22sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/card_shape"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Sunrise Diamonds Ltd. \n\n Room 1,14/F, Peninsula SquareEast Wing, 18 Sung On Street Hunghom, Kowloon,\nHong Kong \n\n T: +852 2723 5100 \n F: +852 2314 9100"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:layout_gravity="center"
+                            android:gravity="center|top"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="support@sunrisediam.com"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:layout_gravity="center"
+                            android:gravity="center|top"
+                            android:autoLink="all"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:layout_marginTop="-30dp"
+                            android:fontFamily="@font/proxima_nova" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/colorPrimary"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="MUMBAI"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/proxima_nova"
+                            android:textSize="22sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/card_shape"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Shairu Gems Diamonds Pvt. Ltd \n\n DE-9012A(Entrance from DC), Bharat Diamond Bourse, Bandra Kurla Complex, Bandra(E),\nMumbai 400 051 India \n\n T: +91 22 4050 5050 \n F: +91 22 2363 0039"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:layout_gravity="center"
+                            android:gravity="center|top"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="kashish@shairugems.net"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:layout_gravity="center"
+                            android:gravity="center|top"
+                            android:autoLink="all"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:layout_marginTop="-30dp"
+                            android:fontFamily="@font/proxima_nova"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/colorPrimary"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="SURAT"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/proxima_nova"
+                            android:textSize="22sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/card_shape"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text=" Shairu Gems Diamonds Pvt.Ltd.\n (Manufacturing Operations) \n\n 166/A/2 170-C, Opp. SMC Swimming Pool, Vasta Devdi Road, Katargam, Surat 395004 - India \n\nT: +91 261 253 6488 \nF: +91 261 253 6855"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:layout_gravity="center"
+                            android:gravity="center|top"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/proxima_nova" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="siddharth@shairugems.net"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:layout_gravity="center"
+                            android:gravity="center|top"
+                            android:autoLink="all"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:layout_marginTop="-30dp"
+                            android:fontFamily="@font/proxima_nova"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</RelativeLayout>

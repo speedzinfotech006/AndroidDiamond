@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/tvClose"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_close"
+        android:tint="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_dialog"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llButtom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:id="@+id/llDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova"
+                    android:buttonTint="@color/white"
+                    android:layout_marginLeft="5dp"
+                    android:checked="true"/>
+
+                <TextView
+                    android:id="@+id/tvDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Details"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova"
+                    android:buttonTint="@color/white"
+                    android:layout_marginLeft="3dp"
+                    android:checked="true"/>
+
+                <TextView
+                    android:id="@+id/tvImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Image"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova"
+                    android:buttonTint="@color/white" />
+                <TextView
+                    android:id="@+id/tvVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Video"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCertificate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova"
+                    android:layout_marginLeft="30dp"
+                    android:buttonTint="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvCertificate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Certificate"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <CheckBox
+                    android:id="@+id/cbActive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova"
+                    android:buttonTint="@color/white"
+                    android:layout_marginRight="20dp"
+                    android:checked="true"/>
+
+                <TextView
+                    android:id="@+id/tvAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="All"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/proxima_nova" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llButtom1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/round_dialog"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:id="@+id/llSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="2"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:src="@drawable/ic_share" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="SHARE"
+                        android:textColor="@color/white"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReset"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="2"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:src="@drawable/ic_close" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="CANCEL"
+                        android:textColor="@color/white"
+                        app:fontFamily="@font/proxima_nova" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnGuestLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/radius_text"
+            android:text="Submit"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textAllCaps="true" />
+
+    </LinearLayout>
+</LinearLayout>

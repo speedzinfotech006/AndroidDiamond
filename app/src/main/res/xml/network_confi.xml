@@ -1,0 +1,8 @@
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">4e0s0i2r4n0u1s0.com:8120</domain>
+        <domain includeSubdomains="true">4e0s0i2r4n0u1s0.com</domain>
+        <domain includeSubdomains="true">i.stonehdfile.com</domain>
+        <domain includeSubdomains="true">sunrisediamonds.com.hk:8122</domain>
+    </domain-config>
+</network-security-config>
